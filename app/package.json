@@ -1,0 +1,36 @@
+{
+  "name": "docker_web_app",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "Stig B. Dørmænen <stigbd@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/informasjonsforvaltning/example-api.git"
+  },
+  "main": "server.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev ./node_modules/.bin/nodemon server.js",
+    "generateTest": "node ./openAPI/generateTest.js",
+    "test": "mocha --exit",
+    "start": "cross-env NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "hot-shots": "^5.9.0",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
+    "koa-route": "^3.2.0",
+    "node-statsd": "^0.1.1",
+    "response-time": "^2.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chakram": "^1.5.0",
+    "cross-env": "^5.2.0",
+    "cucumber": "^4.2.1",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.3",
+    "oatts": "^1.2.3"
+  }
+}
